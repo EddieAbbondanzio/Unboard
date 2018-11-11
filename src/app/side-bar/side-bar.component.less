@@ -1,0 +1,76 @@
+@import '../../colors.less';
+
+.container {
+    background-color: @primary-3;
+    color: @white-3;
+    width: 15%;
+    height: 100%;
+    position: absolute;
+}
+
+.title {
+    padding: 16px;
+    height: 54px;
+    overflow: hidden;
+
+    h1 {
+        padding: 0px 4px;
+        text-align: middle;
+        display: inline-block;
+        font-size: 36px;
+    }
+
+    img {
+        padding: 0px 4px;
+        text-align: bottom;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.board-title {
+    font-size: 24px;
+    padding: 8px;
+}
+
+.board-list {
+    padding: 0px;
+    list-style-type: none;
+
+    li {
+        font-size: 18px;
+        padding: 4px 8px;
+        height: 32px;
+        line-height: 32px;
+
+        .add-icon {
+            vertical-align: text-bottom;
+            padding-right: 4px;
+        }
+    }
+
+    li:hover {
+        background-color: @primary-4;
+    }
+
+    li:active {
+        background-color: @primary-5;
+    }
+}
+
+
+
+.expand-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    :hover {
+        background-color: @primary-4;
+    }
+
+    :active {
+        background-color: @primary-5;
+    }
+}

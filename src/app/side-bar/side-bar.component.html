@@ -1,0 +1,22 @@
+<div class="container" [@expandCollapseBar]=currentState>
+
+  <div class="title">
+      <img src="assets/icon.png">
+      <h1 [@showHideTitle]=currentState>Unboard</h1>
+  </div>
+
+  <ul class="board-list">
+    <li *ngFor="let b of boards">
+      {{ b.name }}
+    </li>
+
+    <li>
+      <i class="material-icons add-icon">add_box</i>
+      <span [@showHideAddLabel]=currentState>Create</span>
+    </li>
+  </ul>
+
+  <div class="expand-icon" [@positionExpandButton]=currentState>
+    <i class="material-icons md-48" (click)="onExpandClick()">{{isExpanded() ? 'chevron_left' : 'chevron_right' }}</i>
+  </div>
+</div>
