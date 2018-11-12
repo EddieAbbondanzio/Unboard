@@ -11,10 +11,10 @@ import { bounce, fadeOut, fadeIn, fadeInLeft, fadeOutLeft } from 'ng-animate';
   animations: [
     trigger('expandCollapseBar', [
       state('expanded', style({
-        width: '15%'
+        width: '240px'
       })),
       state('collapsed', style({
-        width: '5%'
+        width: '90px'
       })),
       transition('expanded=>collapsed', sequence([
         group([

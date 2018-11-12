@@ -5,6 +5,11 @@
  */
 export class User {
     /**
+     * The currently logged in user.
+     */
+    public static current: User;
+
+    /**
      * The unique id of the user.
      */
     public id: number;

@@ -1,5 +1,6 @@
 import { BoardVisibility } from "./board-visibility";
 import { User } from "../user/user";
+import { Section } from "./section/section";
 
 /**
  * A board contains various tasks assorted into
@@ -30,6 +31,11 @@ export class Board {
      * Who can view the board.
      */
     public visibility: BoardVisibility;
+    
+    /**
+     * The board sections.
+     */
+    public sections: Section[];
 
     /**
      * Create a new task board.
