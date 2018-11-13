@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotFoundComponent } from './pages/notfound/notfound.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [NotFoundComponent],
+  declarations: [NotFoundComponent, HomeComponent],
   exports: [NotFoundComponent]
 })
 export class PublicModule { }
