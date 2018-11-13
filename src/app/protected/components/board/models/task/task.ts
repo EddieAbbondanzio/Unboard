@@ -1,5 +1,6 @@
 import { Board } from "../board";
 import { Section } from "../section/section";
+import { TaskPriority } from "./task-priority";
 
 /**
  * A task is a single kanban card. 
@@ -29,6 +30,11 @@ export class Task {
      * The longer description.
      */
     public description: string;
+
+    /**
+     * The priority level of the task.
+     */
+    public priority: TaskPriority;
 
     /**
      * The number of hours that this task

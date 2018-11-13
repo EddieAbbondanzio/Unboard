@@ -1,6 +1,6 @@
 import { BoardVisibility } from "./board-visibility";
-import { User } from "../user/user";
 import { Section } from "./section/section";
+import { User } from "src/app/shared/models/user";
 
 /**
  * A board contains various tasks assorted into
@@ -36,7 +36,7 @@ export class Board {
      * The board sections.
      */
     public sections: Section[];
-
+ 
     /**
      * Create a new task board.
      * @param name The name of the board.

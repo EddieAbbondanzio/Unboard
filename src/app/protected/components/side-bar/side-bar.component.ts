@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Board } from 'src/logic/models/board/board';
 import { trigger, state, style, animate, transition, query, useAnimation, group, animateChild, stagger, sequence } from '@angular/animations';
 import { SIDE_BAR_STATES } from './side-bar-states';
 import { bounce, fadeOut, fadeIn, fadeInLeft, fadeOutLeft } from 'ng-animate';
+import { Board } from '../board/models/board';
 
 @Component({
   selector: 'side-bar',
