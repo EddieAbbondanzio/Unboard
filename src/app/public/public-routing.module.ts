@@ -6,7 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 const publicRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent }
-]
+];
 
 @NgModule({
   imports: [
