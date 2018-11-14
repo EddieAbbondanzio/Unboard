@@ -1,10 +1,67 @@
 @import '../../../../colors.less';
 
-
 .nav-bar {
-    width: 100%;
+    color: @white-3;
     background-color: @primary-3;
-    position: fixed;
-    height: 64px;
+    height: 96px;
+    line-height: 96px;
 
+    .logo {
+        margin: 12px 0px;
+
+        img {
+            height: 48px;
+            display: inline-block;
+            padding-right: 12px;
+        }
+    
+        h1 {
+            font-weight: bold;
+            font-size: 38px;
+            display: inline-block;
+        }
+    }
+
+    .link {
+        padding: 0px 16px;
+        font-size: 20px;
+
+        &:hover {
+        }
+
+        &:active {
+
+        }
+    }
+
+    .button {
+        width: 96px;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 4px;
+        margin: 0px 16px;
+        display: inline-block;
+        text-align: center;
+        background-color: @primary-4;
+
+        &:hover {
+            background-color: @primary-5;
+        }
+
+        &:active {
+            background-color: @primary-6;
+        }
+    }
+
+    .important-button {
+        background-color: @accent-3;
+
+        &:hover {
+            background-color: @accent-4;
+        }
+
+        &:active {
+            background-color: @accent-5;
+        }
+    }
 }
