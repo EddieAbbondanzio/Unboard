@@ -1,3 +1,5 @@
+@import 'colors.less';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,8 +26,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+    height: 100%;
+}
+
 body {
-	line-height: 1;
+    line-height: 1;
+    height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -41,6 +48,16 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+
+.container-fluid {
+    padding: 0px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .left {
@@ -66,5 +83,37 @@ table {
 
     &.md-48 {
         font-size: 48px;
+    }
+}
+
+
+.button {
+    width: 96px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    margin: 0px 16px;
+    display: inline-block;
+    text-align: center;
+    background-color: @primary-5;
+
+    &:hover {
+        background-color: @primary-6;
+    }
+
+    &:active {
+        background-color: @primary-7;
+    }
+}
+
+.important-button {
+    background-color: @accent-3;
+
+    &:hover {
+        background-color: @accent-4;
+    }
+
+    &:active {
+        background-color: @accent-5;
     }
 }

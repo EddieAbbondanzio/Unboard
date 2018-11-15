@@ -1,28 +1,20 @@
-<div class="nav-bar row">
-  <!-- Icon and Name -->
-  <div class="logo col-lg-3">
-    <img src="assets/icon.png">
-    <h1>Unboard</h1>
-  </div>
-
-  <div class="col-lg-5">
-    &nbsp;
-  </div>
-
-  <!-- Hot Links -->
-  <div class="col-lg-2">
-    <a class="link right">Pricing</a>
-
-    <a class="link right">Features</a>
-  </div>
-
-  <!-- Buttons -->
-  <div class="col-lg-2">
-    <div class="button">
-      <a>Log In</a>
+<div class="nav-bar container-fluid">
+  <div class="row">
+    <!-- Icon and Name -->
+    <div class="logo col-sm-4 col-lg-3">
+      <a routerLink="/">
+        <img src="assets/icon.png">
+        <h1>Unboard</h1>
+      </a>
     </div>
-    <div class="button important-button">
-      <a>Sign Up</a>
+
+    <!-- Hot Links -->
+    <div class="col-sm-8 offset-lg-3 col-lg-6 text-right">
+      <a class="link">Features</a>
+      <a class="link">Pricing</a>
+
+      <a class="button" routerLink="/login">Log In</a>
+      <a class="button important-button" routerLink="/signup">Sign Up</a>
     </div>
   </div>
 </div>

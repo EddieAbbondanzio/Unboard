@@ -1,10 +1,17 @@
 @import '../../../../colors.less';
 
+@nav-bar-height: 96px;
+
 .nav-bar {
-    color: @white-3;
+    color: @neutral-1;
     background-color: @primary-3;
-    height: 96px;
-    line-height: 96px;
+    height: @nav-bar-height;
+    line-height: @nav-bar-height;
+
+    a {
+        text-decoration: none;
+        color: @neutral-1;
+    }
 
     .logo {
         margin: 12px 0px;
@@ -31,37 +38,6 @@
 
         &:active {
 
-        }
-    }
-
-    .button {
-        width: 96px;
-        height: 48px;
-        line-height: 48px;
-        border-radius: 4px;
-        margin: 0px 16px;
-        display: inline-block;
-        text-align: center;
-        background-color: @primary-4;
-
-        &:hover {
-            background-color: @primary-5;
-        }
-
-        &:active {
-            background-color: @primary-6;
-        }
-    }
-
-    .important-button {
-        background-color: @accent-3;
-
-        &:hover {
-            background-color: @accent-4;
-        }
-
-        &:active {
-            background-color: @accent-5;
         }
     }
 }
