@@ -10,15 +10,19 @@
                 </header>
 
                 <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
-                    <input type="email" placeholder="Email" formControlName="email" />
+                    <input type="email" placeholder="Email" formControlName="email" (blur)="blur()" />
 
-                    <input type="password" placeholder="Password" formControlName="password" />
+                    <input type="password" placeholder="Password" formControlName="password" (blur)="blur()" />
 
-                    <a class="mb-5" style="display: block;" >I forgot my password</a>
+                    <a>I forgot my password</a>
+
+                    <div class="my-4">
+                        <ui-validation-summary #valSummary [formGroup]="loginForm"></ui-validation-summary>
+                    </div>
 
                     <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
 
-                    <input type="submit" value="submit">
+                    <input type="submit" class="accent-button login-button mt-2" value="submit">
                 </form>
             </div>
         </div>

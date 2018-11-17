@@ -78,35 +78,48 @@ table {
 }
 
 form.ng-touched {
-    input[type=email] {
+    input[type=email].ng-touched {
         &.ng-invalid {
             border-left: 8px solid @error-3!important;
         }
     }
 
-    input[type=textbox] {
+    input[type=textbox].ng-touched {
         &.ng-invalid {
             border-left: 8px solid @error-3!important;
         }
     }
 
-    input[type=password] {
+    input[type=password].ng-touched {
         &.ng-invalid {
             border-left: 8px solid @error-3!important;
         }
     }
 }
 
+//Links should have an underline appear below them.
+a {
+    cursor: pointer;
 
-.button {
+    &:hover {
+        text-decoration: underline!important;
+    }
+
+    &:active {
+        text-decoration: underline!important;
+    }
+}
+
+.primary-button {
     width: 96px;
     height: 48px;
     line-height: 48px;
     border-radius: 4px;
-    margin: 0px 16px;
     display: inline-block;
     text-align: center;
+    cursor: pointer;
     background-color: @primary-5;
+    border: none;
 
     &:hover {
         background-color: @primary-6;
@@ -117,8 +130,17 @@ form.ng-touched {
     }
 }
 
-.important-button {
+.accent-button {
+    width: 96px;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
     background-color: @accent-3;
+    color: @neutral-1;
+    cursor: pointer;
+    border: none;
 
     &:hover {
         background-color: @accent-4;

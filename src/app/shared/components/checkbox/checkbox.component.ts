@@ -9,7 +9,7 @@ import { FormControlCallback } from '../../common/form-control-callback';
  */
 @Component({
   selector: 'ui-checkbox',
-  template: '<ui-checkbox {{label}}',
+  template: '<ui-checkbox {{label}}></ui-checkbox>',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.less'],
   providers: [

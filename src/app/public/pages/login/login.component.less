@@ -1,7 +1,7 @@
 @import '../../../../colors.less';
 @import '../../components/nav-bar/nav-bar.component.less';
 
-//Bootstrap container, and the gray shade that appears over the background.
+//Background image, and the gray shade that appears over the background.
 .container-fluid {
     background-image: url("../../../../assets/login-background.jpg");
     background-size: cover;
@@ -37,7 +37,7 @@
         width: 320px;
         margin: 16px auto;
 
-        input {
+        input[type=email], input[type=password] {
             font-size: 18px;
             width: 320px;
             margin: 8px 0px;
@@ -55,9 +55,8 @@
             color: @neutral-9;
         }
 
-        input[type=submit] {
-            color: @neutral-1;
-            background-color: @accent-3;
+        .login-button {
+            width: 320px;
         }
     }
 }
