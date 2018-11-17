@@ -7,6 +7,7 @@ import { PublicRoutingModule } from './public/public-routing.module';
 import { PublicModule } from './public/public.module';
 import { ProtectedModule } from './protected/protected.module';
 import { ProtectedRoutingModule } from './protected/protected-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { ProtectedRoutingModule } from './protected/protected-routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ProtectedRoutingModule,
     PublicRoutingModule,
     PublicModule,

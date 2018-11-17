@@ -50,7 +50,6 @@ table {
 	border-spacing: 0;
 }
 
-
 .container-fluid {
     padding: 0px;
 }
@@ -58,14 +57,6 @@ table {
 .row {
     margin-left: 0px;
     margin-right: 0px;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
 }
 
 .material-icons {
@@ -83,6 +74,26 @@ table {
 
     &.md-48 {
         font-size: 48px;
+    }
+}
+
+form.ng-touched {
+    input[type=email] {
+        &.ng-invalid {
+            border-left: 8px solid @error-3!important;
+        }
+    }
+
+    input[type=textbox] {
+        &.ng-invalid {
+            border-left: 8px solid @error-3!important;
+        }
+    }
+
+    input[type=password] {
+        &.ng-invalid {
+            border-left: 8px solid @error-3!important;
+        }
     }
 }
 

@@ -4,31 +4,22 @@
     <div class="background-shade">
 
         <div class="row justify-content-center">
-            <div class="col-sm-8 col-lg-4 content">
-                <div class="header">
+            <div class="col-sm-8 col-lg-4 main">
+                <header>
                     <h2 class="text-center">Welcome Back</h2>
-                </div>
+                </header>
 
-                <input type="text" placeholder="Email" />
+                <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+                    <input type="email" placeholder="Email" formControlName="email" />
 
-                <input type="text" placeholder="Password" />
+                    <input type="password" placeholder="Password" formControlName="password" />
 
-                <div class="reset-password-link">
-                    <a>I forgot my password</a>
-                </div>
+                    <a class="mb-5" style="display: block;" >I forgot my password</a>
 
-                <div class="remember-me">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="rememberMe" value="">
-                            <i class="helper"></i>Remember me
-                        </label>
-                    </div>
-                </div>
+                    <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
 
-                <div class="button important-button">
-                    <a>Login</a>
-                </div>
+                    <input type="submit" value="submit">
+                </form>
             </div>
         </div>
     </div>
