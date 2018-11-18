@@ -27,7 +27,7 @@ export class LoginComponent {
   /**
    * User wants to attempt to log in.
    */
-  public loginSubmit(): void {
+  public submit(): void {
     this.loginForm.markAsTouched();
 
     if(this.loginForm.valid) {

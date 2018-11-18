@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationSummaryComponent } from './components/validation-summary/validation-summary.component';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
-  declarations: [CheckboxComponent, ValidationSummaryComponent],
+  declarations: [CheckboxComponent, ValidationSummaryComponent, PanelComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -13,7 +14,8 @@ import { ValidationSummaryComponent } from './components/validation-summary/vali
   ],
   exports: [
     CheckboxComponent,
-    ValidationSummaryComponent
+    ValidationSummaryComponent,
+    PanelComponent
   ]
 })
 export class SharedModule { }

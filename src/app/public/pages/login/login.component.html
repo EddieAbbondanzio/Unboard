@@ -2,28 +2,25 @@
 
 <div class="container-fluid">
     <div class="background-shade">
-
         <div class="row justify-content-center">
             <div class="col-sm-8 col-lg-4 main">
-                <header>
-                    <h2 class="text-center">Welcome Back</h2>
-                </header>
+                <ui-panel header="Welcome Back">
+                    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                        <input type="email" placeholder="Email" formControlName="email" (blur)="blur()" />
 
-                <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
-                    <input type="email" placeholder="Email" formControlName="email" (blur)="blur()" />
+                        <input type="password" placeholder="Password" formControlName="password" (blur)="blur()" />
 
-                    <input type="password" placeholder="Password" formControlName="password" (blur)="blur()" />
+                        <a>I forgot my password</a>
 
-                    <a>I forgot my password</a>
+                        <div class="my-4">
+                            <ui-validation-summary #valSummary [formGroup]="loginForm"></ui-validation-summary>
+                        </div>
 
-                    <div class="my-4">
-                        <ui-validation-summary #valSummary [formGroup]="loginForm"></ui-validation-summary>
-                    </div>
+                        <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
 
-                    <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
-
-                    <input type="submit" class="accent-button login-button mt-2" value="submit">
-                </form>
+                        <input type="submit" class="accent-button login-button mt-2" value="Log in">
+                    </form>
+                </ui-panel>
             </div>
         </div>
     </div>
