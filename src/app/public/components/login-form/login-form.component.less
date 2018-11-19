@@ -1,18 +1,12 @@
 @import '../../../../colors.less';
-@import '../../components/nav-bar/nav-bar.component.less';
 
 form {
     width: 320px;
     margin: 16px auto;
 
-    label {
-        padding-top: 8px;
-        display: block;
-    }
-
-    input[type=email], input[type=text], input[type=password] {
-    font-size: 18px;
-    width: 320px;
+    input[type=email], input[type=password] {
+        font-size: 18px;
+        width: 320px;
         margin: 8px 0px;
         padding: 0px 4px;
 
@@ -23,8 +17,12 @@ form {
         height: 40px;
     }
 
-    input[type=submit] {
+    .remember-me-checkbox {
+        margin-top: 48px;
+        color: @neutral-9;
+    }
+
+    .login-button {
         width: 320px;
     }
 }
-

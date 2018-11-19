@@ -1,0 +1,14 @@
+@import '../../../../colors.less';
+@import '../../components/nav-bar/nav-bar.component.less';
+
+//Background image, and the gray shade that appears over the background.
+.container-fluid {
+    // background-image: url("../../../../assets/02.jpg");
+    background-size: cover;
+    height: calc(100% - @nav-bar-height); 
+
+    .background-shade {
+        background-color: rgba(18, 39, 63, 0.877);
+        height: 100%;
+    }
+}

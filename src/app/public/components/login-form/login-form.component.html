@@ -1,0 +1,15 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <input type="email" placeholder="Email" formControlName="email" (blur)="validate()" />
+
+  <input type="password" placeholder="Password" formControlName="password" (blur)="validate()" />
+
+  <a>I forgot my password</a>
+
+  <div class="my-4">
+      <ui-validation-summary #valSummary [formGroup]="formGroup"></ui-validation-summary>
+  </div>
+
+  <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
+
+  <input type="submit" class="accent-button login-button mt-2" value="Log in">
+</form>

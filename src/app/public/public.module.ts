@@ -8,6 +8,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PublicMasterPageComponent } from './components/public-master-page/public-master-page.component';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
 
 @NgModule({
   imports: [
@@ -17,6 +20,6 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [NotFoundComponent, HomeComponent, NavBarComponent, LoginComponent, SignupComponent]
+  declarations: [NotFoundComponent, HomeComponent, NavBarComponent, LoginComponent, SignupComponent, LoginFormComponent, PublicMasterPageComponent, SignupFormComponent]
 })
 export class PublicModule { }

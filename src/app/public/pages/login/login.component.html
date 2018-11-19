@@ -1,27 +1,9 @@
-<nav-bar></nav-bar>
-
-<div class="container-fluid">
-    <div class="background-shade">
-        <div class="row justify-content-center">
-            <div class="col-sm-8 col-lg-4 main">
-                <ui-panel header="Welcome Back">
-                    <form [formGroup]="loginForm" (ngSubmit)="submit()">
-                        <input type="email" placeholder="Email" formControlName="email" (blur)="blur()" />
-
-                        <input type="password" placeholder="Password" formControlName="password" (blur)="blur()" />
-
-                        <a>I forgot my password</a>
-
-                        <div class="my-4">
-                            <ui-validation-summary #valSummary [formGroup]="loginForm"></ui-validation-summary>
-                        </div>
-
-                        <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
-
-                        <input type="submit" class="accent-button login-button mt-2" value="Log in">
-                    </form>
-                </ui-panel>
-            </div>
+<ui-public-master-page backgroundImage="/assets/02.jpg">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 col-lg-4 main">
+            <ui-panel header="Welcome Back">
+                <ui-login-form></ui-login-form>
+            </ui-panel>
         </div>
     </div>
-</div>
+</ui-public-master-page>
