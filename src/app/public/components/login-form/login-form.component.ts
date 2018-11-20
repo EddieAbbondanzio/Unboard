@@ -8,40 +8,12 @@ import { LoginCredentials } from './login-credentials';
  * Form to process a user's email and password and
  * attempt to authenticate them with the server.
  */
-@Component({
-  selector: 'ui-login-form',
+@Component({ 
+  selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.less']
 })
 export class LoginFormComponent extends AbstractForm<LoginCredentials> {
-  /**
-   * The name of the form group this form belongs to.
-   */
-  public group: string = 'loginForm';
-
-  /**
-   * Create a new login form.
-   */
-  constructor() {
-    super();
-    this.isValid = false;
-  }
-
-  /**
-   * Submit the form and attempt to log in.
-   */
-  public submit(): void {
-    this.formGroup.markAsTouched();
-
-    if (this.formGroup.valid) {
-      console.log('LOGGGIN IN');
-    }
-    else if (this.validationSummary != null) {
-      this.markAllControlsAsTouched();
-      this.validationSummary.update(true);
-    }
-  }
-
   /**
    * Generate the angular form group.
    */
@@ -53,8 +25,7 @@ export class LoginFormComponent extends AbstractForm<LoginCredentials> {
       password: new FormControl('', [
         Validators.required
       ]),
-      rememberMe: new FormControl()
+      rememberMe: new FormControl(false)
     });
   }
-
 }

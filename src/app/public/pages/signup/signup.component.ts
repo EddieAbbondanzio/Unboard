@@ -52,6 +52,4 @@ export class SignupComponent {
       this.validationSummary.update(true);
     }
   }
-
-
 }

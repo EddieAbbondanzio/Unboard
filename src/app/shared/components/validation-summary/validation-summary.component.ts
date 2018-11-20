@@ -9,7 +9,7 @@ import { StringUtils } from '../../utils/string-utils';
  * the user.
  */
 @Component({
-  selector: 'ui-validation-summary',
+  selector: 'app-validation-summary',
   templateUrl: './validation-summary.component.html',
   styleUrls: ['./validation-summary.component.less']
 })

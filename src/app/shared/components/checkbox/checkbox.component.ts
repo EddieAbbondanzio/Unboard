@@ -8,8 +8,8 @@ import { FormControlCallback } from '../../common/form-control-callback';
  * the standard html checkbox. Supports reactive forms.
  */
 @Component({
-  selector: 'ui-checkbox',
-  template: '<ui-checkbox {{label}}></ui-checkbox>',
+  selector: 'app-checkbox',
+  template: '<app-checkbox {{label}}></app-checkbox>',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.less'],
   providers: [

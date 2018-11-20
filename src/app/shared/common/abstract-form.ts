@@ -1,20 +1,22 @@
 import { ValidationSummaryComponent } from "../components/validation-summary/validation-summary.component";
 import { ViewChild } from "@angular/core";
 import { FormGroup, FormArray, AbstractControl } from "@angular/forms";
+import { AbstractFormCallback } from "./abstract-form-callback";
 
 /**
  * Form control for processing user input.
  */
 export abstract class AbstractForm<T> {
     /**
-     * The name of the form group this form belongs to.
-     */
-    public abstract group: string;
-
-    /**
      * If the form is currently valid.
      */
     public isValid: boolean;
+
+
+    /**
+     * The callback to invoke when the method is submitting.
+     */
+    public onSubmit: AbstractFormCallback<T>;
 
     /**
      * The form for validating.
@@ -41,11 +43,6 @@ export abstract class AbstractForm<T> {
     protected abstract initFormGroup(): FormGroup;
 
     /**
-     * Submit the form.
-     */
-    public abstract submit(): void;
-
-    /**
      * Validate the content of the form.
      */
     public validate(): void {
@@ -54,6 +51,21 @@ export abstract class AbstractForm<T> {
         }
 
         this.isValid = this.formGroup.valid;
+    }
+
+    /**
+    * Submit the form and attempt to log in.
+    */
+    public submit(): void {
+        this.formGroup.markAsTouched();
+
+        if (this.formGroup.valid && this.onSubmit != null) {
+            this.onSubmit(this.formGroup.value as T);
+        }
+        else if (this.validationSummary != null) {
+            this.markAllControlsAsTouched();
+            this.validationSummary.update(true);
+        }
     }
 
     /**

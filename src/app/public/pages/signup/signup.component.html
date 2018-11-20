@@ -1,30 +1,9 @@
-<ui-public-master-page backgroundImage="/assets/01.jpg">
+<app-public-master-page backgroundImage="/assets/01.jpg">
   <div class="row justify-content-center">
     <div class="col-sm-8 col-lg-4">
-      <ui-panel header="Sign Up for Free">
-        <form [formGroup]="signupForm" (ngSubmit)="submit()">
-          <label for="emailTextBox">Email<span class="required">*</span></label>
-          <input type="email" id="emailTextBox" placeholder="email@domain.com" formControlName="email">
-
-          <label for="emailTextBox">Password<span class="required">*</span></label>
-          <input type="password" placeholder="********" formControlName="password">
-
-          <label for="emailTextBox">Confirm Password<span class="required">*</span></label>
-          <input type="password" placeholder="********" formControlName="confirmPassword">
-
-          <label for="emailTextBox">Name<span class="required">*</span></label>
-          <input type="text" placeholder="John Smith" formControlName="name">
-
-          <label for="emailTextBox">Company Name</label>
-          <input type="text" placeholder="The Business Factory" formControlName="company">
-
-          <div class="my-4">
-            <ui-validation-summary #valSummary [formGroup]="signupForm"></ui-validation-summary>
-          </div>
-
-          <input type="submit" class="accent-button login-button mt-5" value="Sign up">
-        </form>
-      </ui-panel>
+      <app-panel header="Sign Up for Free">
+        <app-signup-form></app-signup-form>
+      </app-panel>
     </div>
   </div>
-</ui-public-master-page>
+</app-public-master-page>

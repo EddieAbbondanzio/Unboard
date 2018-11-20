@@ -6,10 +6,10 @@
   <a>I forgot my password</a>
 
   <div class="my-4">
-      <ui-validation-summary #valSummary [formGroup]="formGroup"></ui-validation-summary>
+    <app-validation-summary #valSummary [formGroup]="formGroup"></app-validation-summary>
   </div>
 
-  <ui-checkbox label="Remember Me" formControlName="rememberMe"></ui-checkbox>
+  <app-checkbox label="Remember Me" formControlName="rememberMe"></app-checkbox>
 
   <input type="submit" class="accent-button login-button mt-2" value="Log in">
 </form>

@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PublicMasterPageComponent } from './components/public-master-page/public-master-page.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { TermsOfUseComponent } from './pages/terms-of-use/terms-of-use.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [NotFoundComponent, HomeComponent, NavBarComponent, LoginComponent, SignupComponent, LoginFormComponent, PublicMasterPageComponent, SignupFormComponent]
+  declarations: [NotFoundComponent, HomeComponent, NavBarComponent, LoginComponent, SignupComponent, LoginFormComponent, PublicMasterPageComponent, SignupFormComponent, TermsOfUseComponent]
 })
 export class PublicModule { }

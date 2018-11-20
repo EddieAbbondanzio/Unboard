@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
  * offers the ability to specify a custom header atop of the panel.
  */
 @Component({
-  selector: 'ui-panel',
+  selector: 'app-panel',
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.less']
 })

@@ -1,3 +1,26 @@
-<p>
-  signup-form works!
-</p>
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <label for="emailTextBox">Email<span class="required">*</span></label>
+  <input type="email" id="emailTextBox" placeholder="email@domain.com" formControlName="email" (blur)="validate()" >
+
+  <label for="emailTextBox">Password<span class="required">*</span></label>
+  <input type="password" placeholder="********" formControlName="password" (blur)="validate()" >
+
+  <label for="emailTextBox">Confirm Password<span class="required">*</span></label>
+  <input type="password" placeholder="********" formControlName="confirmPassword" (blur)="validate()" >
+
+  <label for="emailTextBox">Name<span class="required">*</span></label>
+  <input type="text" placeholder="John Smith" formControlName="name" (blur)="validate()" >
+
+  <label for="emailTextBox">Company Name</label>
+  <input type="text" placeholder="The Business Factory" formControlName="companyName" (blur)="validate()" >
+
+  <div class="my-4">
+    <app-validation-summary #valSummary [formGroup]="formGroup"></app-validation-summary>
+  </div>
+
+  <input type="submit" class="accent-button login-button mt-5" value="Sign up">
+
+  <div class="pt-5">
+    <span>By creating an account with us, you agree to our <a routerLink="/terms-of-use">Terms of Use.</a> </span>
+  </div>
+</form>
